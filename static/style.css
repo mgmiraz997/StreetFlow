@@ -10,7 +10,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgb(230, 185, 222);
+    background: rgb(188, 127, 205);
     padding: 30px;
 }
 .container{
@@ -54,8 +54,8 @@ body{
   position: absolute;
   height: 100%;
   width: 100%;
-  background: rgb(230, 185, 222);
-  opacity: 0.5;
+  background: rgb(188, 127, 205);
+  opacity: 0.4;
   z-index: 12;
 }
 .container .cover::after{
@@ -64,7 +64,7 @@ body{
   backface-visibility: hidden;
 }
 .container .cover img{
-  position: absolute;
+  position: initial;
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -118,7 +118,7 @@ body{
   bottom: 0;
   height: 3px;
   width: 25px;
-  background: #ec2716;
+  background: #bc7fcd;
 }
 .forms .signup-form  .title:before{
   width: 20px;
