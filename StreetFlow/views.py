@@ -6,4 +6,4 @@ def home(request):
 
 
 def style(request):
-    return render (request, template_name='style.css')
+    return render(request, template_name='style.css')
