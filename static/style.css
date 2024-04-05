@@ -10,7 +10,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #e82a4c;
+    background: #1bca9c;
     padding: 30px;
 }
 .container{
@@ -54,7 +54,7 @@ body{
   position: absolute;
   height: 100%;
   width: 100%;
-  background: #ec2716;
+  background: #1bca9c;
   opacity: 0.5;
   z-index: 12;
 }
