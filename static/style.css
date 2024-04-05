@@ -35,6 +35,7 @@ body{
 }
 .container #flip:checked ~ .cover{
   transform: rotateY(-180deg);
+  backface-visibility: hidden;
 }
  .container .cover .front,
  .container .cover .back{
@@ -71,6 +72,7 @@ body{
   z-index: 10;
 }
 .container .cover .text{
+  top: 10px;
   position: absolute;
   z-index: 130;
   height: 100%;
@@ -78,14 +80,16 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+
 }
 .cover .text .text-1,
 .cover .text .text-2{
   font-size: 26px;
   font-weight: 600;
-  color: #fff;
+  color: #2d003bc4;
   text-align: center;
+
 }
 .cover .text .text-2{
   font-size: 15px;
