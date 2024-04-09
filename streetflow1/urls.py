@@ -5,7 +5,8 @@ urlpatterns = [
 
     path('', views.home, name='home'),
     path('login/',auth_views.LoginView.as_view(),name='login'),
-    path('logout/',auth_views.LoginView.as_view(),name='logout'),
+
+    # path('logout/',auth_views.LoginView.as_view(),name='logout'),
 
 
 
@@ -14,8 +15,8 @@ urlpatterns = [
 
     path('password_reset/done/',auth_views.PasswordResetDoneView.as_view(),name='password_reset_done'),
 
-    path('reset/<uidb64>/<token>/',auth_views.PasswordResetConfirmView.as_view(),name='password_reset_confir m'),
+    # path('reset/<uidb64>/<token>/',auth_views.PasswordResetConfirmView.as_view(),name='password_reset_confir m'),
 
-    path('reset/done/',auth_views.PasswordResetCompleteView.as_view(),name='password_reset_complete'),
+    # path('reset/done/',auth_views.PasswordResetCompleteView.as_view(),name='password_reset_complete'),
 
 ]

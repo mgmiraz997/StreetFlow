@@ -137,6 +137,8 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/images/'
 MEDIA_ROOT = os.path.join(BASE_DIR, '')
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+LOGIN_REDIRECT_URL ='menu'
+login_url = 'login'
+
 
 
