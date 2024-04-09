@@ -30,6 +30,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'StreetFlow',
+    'streetflow1',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -135,3 +136,7 @@ STATICFILES_DIRS = [
 # Media files
 MEDIA_URL = '/images/'
 MEDIA_ROOT = os.path.join(BASE_DIR, '')
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+
