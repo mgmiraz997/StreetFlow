@@ -17,8 +17,7 @@ def home(request):
         if user is not None:
             auth.login(request, user)
             return redirect('menu')
-        else:
-            return redirect("Wrong Password")
+
     return render(request, 'home.html')
 
 
