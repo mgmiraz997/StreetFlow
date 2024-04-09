@@ -137,8 +137,6 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/images/'
 MEDIA_ROOT = os.path.join(BASE_DIR, '')
 
-LOGIN_REDIRECT_URL ='menu'
+LOGIN_REDIRECT_URL = 'dashboard'
 login_url = 'login'
-
-
-
+LOGOUT_URL = 'logout'
