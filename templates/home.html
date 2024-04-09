@@ -28,6 +28,9 @@
         </div>-->
       </div>
     </div>
+       {% if error %}
+    <p>{{ error }}</p>
+    {% endif %}
     <div class="forms">
         <div class="form-content">
           <div class="login-form">
@@ -37,13 +40,13 @@
             <div class="input-boxes">
               <div class="input-box">
                 <i class="fas fa-envelope"></i>
-                <input type="text" placeholder="Enter your email" name="email" required>
+                <input type="email" name="email" placeholder="Email" required>
               </div>
               <div class="input-box">
                 <i class="fas fa-lock"></i>
-                <input type="password" placeholder="Enter your password" name="password" required>
+                <input type="password" name="password" placeholder="Password" required>
               </div>
-              <div class="text"><a href="{% url 'password_reset' %}">Forgot password?</a></div>
+              <div class="text"><a href="#">Forgot password?</a></div>
               <div class="button input-box">
                 <input type="submit" value="Submit">
               </div>
@@ -69,7 +72,7 @@
                 <input type="password" placeholder="Enter your password" name="password" required>
               </div>
               <div class="button input-box">
-                <input type="submit" value="Submit">
+               <input type="submit" name="register">
               </div>
               <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
             </div>
