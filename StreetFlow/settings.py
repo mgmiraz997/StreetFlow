@@ -137,6 +137,16 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/images/'
 MEDIA_ROOT = os.path.join(BASE_DIR, '')
 
+# Forget password segment
 LOGIN_REDIRECT_URL = 'dashboard'
 login_url = 'login'
 LOGOUT_URL = 'logout'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'mahmudul.gony@gmail.com'
+EMAIL_HOST_PASSWORD = '24237MIRAZ'
+
+
