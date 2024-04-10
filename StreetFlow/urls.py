@@ -26,6 +26,7 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('menu',views.menu, name='menu'),
     path('streetflow1',include('streetflow1.urls')),
+
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

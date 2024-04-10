@@ -1,5 +1,4 @@
-
-from django.contrib import auth
+from django.contrib import auth,messages
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 
@@ -24,7 +23,10 @@ def home(request):
                 auth.login(request, user)
                 return redirect('menu')
             else:
-                error = "Invalid email or password"
+                messages.info(request, 'Invalid Credential')
+                return redirect('login')
+            #else:
+                #error = "Invalid email or password"
 
     return render(request, 'home.html', {'error': error})
 
