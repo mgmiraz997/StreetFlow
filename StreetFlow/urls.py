@@ -26,6 +26,8 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('menu',views.menu, name='menu'),
     path('streetflow1',include('streetflow1.urls')),
+    path('members/',include('members.urls')),
+    path('members/',include('django.contrib.auth.urls')),
 
 ]
 if settings.DEBUG:
