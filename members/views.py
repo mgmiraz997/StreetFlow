@@ -13,9 +13,9 @@ def login_user(request):
         user = authenticate(username=users.username, password=password)
         if user is not None:
             login(request, user)
-            return redirect('/')
+            return redirect('/auth')
 
         else:
             messages.success(request, "The email or password is incorrect. Try again...")
-            return redirect('/auth')
+            return redirect('/')
 
