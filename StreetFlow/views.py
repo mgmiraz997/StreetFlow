@@ -12,16 +12,16 @@ def home(request):
         email = request.POST.get('email')
         password = request.POST.get('password')
 
-
         data = User.objects.create_user(username=username, email=email, password=password)
         data.save()
         error = "Registration successful! Please login."
 
+    return render(request, 'home.html', {'error': error})
 
-    return render(request, 'home.html',{'error': error})
+
 def login_view(request):
-
     return redirect('/')
+
 
 def index(request):
     return render(request, 'index.html')
