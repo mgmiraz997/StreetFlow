@@ -31,11 +31,7 @@
        {% if error %}
     <p>{{ error }}</p>
     {% endif %}
-    <div class="forms">
-        <div class="form-content">
-          <div class="login-form">
-            <div class="title">Login</div>
-              {% if messages %}
+        {% if messages %}
         {% for message in messages %}
              
             <div class="alert 
@@ -47,6 +43,11 @@
             </div>
         {% endfor %}
     {% endif %}
+    <div class="forms">
+        <div class="form-content">
+          <div class="login-form">
+            <div class="title">Login</div>
+        
           <form method="POST" action="{% url 'login' %}"> <!--Login -->
               {% csrf_token %}
             <div class="input-boxes">
