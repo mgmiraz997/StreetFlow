@@ -7,20 +7,21 @@
 </head>
 <body>
 <!--<div class="container">
-    % if messages %}
-        % for message in messages %}
+   { % if messages %}
+       { % for message in messages %}
             
             <div class="alert 
             alert-warning 
             alert-dismissible fade show
             " role="alert">
-                { message }}
-  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                
+                
+  
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
-        % endfor %}
-    % endif %}
-</div>-->
+       { % endfor %}
+   { % endif %}
+</div> -->
 
 <header>
    
@@ -37,10 +38,6 @@
     {% block content %}
     {% endblock %}
 </main>
-
-<footer>
-    <!--<p>&copy; 2024 My Django Project. All rights reserved.</p>-->
-</footer>
 
 </body>
 </html>
