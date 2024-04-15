@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
@@ -8,15 +9,13 @@ def login_user(request):
 
         email = request.POST["email"]
         password = request.POST["password"]
-        user = authenticate(request, email=email, password=password)
+        users = User.objects.get(email=email)
+        user = authenticate(username=users.username, password=password)
         if user is not None:
             login(request, user)
-            return redirect('index.html')
+            return redirect('/')
 
         else:
             messages.success(request, "The email or password is incorrect. Try again...")
-            return redirect('home')
+            return redirect('/auth')
 
-
-    else:
-        render(request,'authenticate/login.html',{})

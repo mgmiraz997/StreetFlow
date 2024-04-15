@@ -12,30 +12,18 @@ def home(request):
         email = request.POST.get('email')
         password = request.POST.get('password')
 
-        # SignUP
-        if 'register' in request.POST:
-            data = User.objects.create_user(username=username, email=email, password=password)
-            data.save()
-            error = "Registration successful! Please login."
 
-        # Login
-        if 'login' in request.POST:
-            form = AuthenticationForm(data=request.POST)
-            if form.is_valid():
-                username = form.get_user()
-                login(request.user)
-                if 'next' in request.POST:
-                    return redirect(request.POST.get('next'))
-                else:
-                    return redirect('index:list')
-            else:
-                form = AuthenticationForm()
-            return redirect(request, 'home.html', {'form': form})
-
-    return render(request, 'home.html', {'error': error})
+        data = User.objects.create_user(username=username, email=email, password=password)
+        data.save()
+        error = "Registration successful! Please login."
 
 
-def menu(request):
+    return render(request, 'home.html',{'error': error})
+def login_view(request):
+
+    return redirect('/')
+
+def index(request):
     return render(request, 'index.html')
 
 

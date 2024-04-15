@@ -23,11 +23,11 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name='home'),
-    path('menu',views.menu, name='menu'),
+    path('auth/', views.home, name='home'),
+    path('',views.index, name='index'),
     path('streetflow1',include('streetflow1.urls')),
     path('members/',include('members.urls')),
-    path('members/',include('django.contrib.auth.urls')),
+
 
 ]
 if settings.DEBUG:
