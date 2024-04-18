@@ -27,6 +27,7 @@ urlpatterns = [
     path('streetflow1', include('streetflow1.urls')),
     path('members/', include('members.urls')),
     path('/contactus', views.contactus, name='contactus'),
+    path('/ticket', views.ticket, name='ticket'),
 
 ]
 if settings.DEBUG:
