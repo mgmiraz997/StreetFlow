@@ -29,3 +29,7 @@ def index(request):
 
 def style(request):
     return render(request, 'style.css')
+
+
+def contactus(request):
+    return render(request, 'contactus.html')
