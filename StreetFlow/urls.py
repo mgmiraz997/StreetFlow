@@ -28,6 +28,7 @@ urlpatterns = [
     path('members/', include('members.urls')),
     path('/contactus', views.contactus, name='contactus'),
     path('/ticket', views.ticket, name='ticket'),
+    path('/map', views.map, name='map'),
 
 ]
 if settings.DEBUG:
