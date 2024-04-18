@@ -33,3 +33,6 @@ def style(request):
 
 def contactus(request):
     return render(request, 'contactus.html')
+
+def ticket(request):
+    return render(request, 'ticket.html')
