@@ -29,6 +29,7 @@ urlpatterns = [
     path('/contactus', views.contactus, name='contactus'),
     path('/ticket', views.ticket, name='ticket'),
     path('/map', views.map, name='map'),
+    path('/reserve', views.reserve, name='reserve'),
 
 ]
 if settings.DEBUG:
