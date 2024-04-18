@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'StreetFlow',
     'streetflow1',
     'members',
+    'map',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
