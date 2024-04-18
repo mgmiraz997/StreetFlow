@@ -36,3 +36,6 @@ def contactus(request):
 
 def ticket(request):
     return render(request, 'ticket.html')
+
+def map(request):
+    return render(request, 'map.html')
