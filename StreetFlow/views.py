@@ -39,3 +39,6 @@ def ticket(request):
 
 def map(request):
     return render(request, 'map.html')
+
+def reserve(request):
+    return render(request, 'reserve.html')
