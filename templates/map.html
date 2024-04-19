@@ -20,6 +20,7 @@
         for (let vehicle of vehicles){
             L.marker([vehicle.latitude, vehicle.longitude]).addTo(markerFeatureGroup);
         }
+        setInterval(() => updateMarkers (markerFeatureGroup),5000)
 
     });
 
