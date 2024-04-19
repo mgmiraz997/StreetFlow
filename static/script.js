@@ -10,7 +10,7 @@ function createMap(center,zoom) {
 function updateMarkers(markerFeatureGroup){
     // send a request to the server to get the new latitude and longitude data
     fetch('/vehicle-positions/').then((response => response.json()).then((data => {
-        let prevLatLons =[]
+        let prevLatLons = []
         markerFeatureGroup.eachLayer(layer => layer.hasOwnProperty('_latlng') && prevLatLons.push(layer.latlng))
 
         markerFeatureGroup.clearLayers();
@@ -19,8 +19,8 @@ function updateMarkers(markerFeatureGroup){
             let prevLatLon = [prevLatLons[idx].lat, prevLatLons[idx].lng];
             let newLatLon = [vehicle.latitude, vehicle.longitude];
             L.marker(newLatLon).addTo(markerFeatureGroup)
-            L.polyline([prevLatLon, newLatLon])addTo(markerFeatureGroup)
+            L.polyline([prevLatLon, newLatLon]), addTo(markerFeatureGroup)
         })
 
-    })
+    })))
 }
