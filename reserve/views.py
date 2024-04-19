@@ -102,6 +102,7 @@ def seebookings(request,new={}):
         context["error"] = "Sorry no buses booked"
         return render(request, 'findbus.html', context)
 
-
+def booklist(request):
+    return render(request, 'booklist.html')
 
 
