@@ -30,7 +30,7 @@ urlpatterns = [
     path('/ticket', views.ticket, name='ticket'),
     path('/map', views.map, name='map'),
     path('reserve', views.reserve, name='reserve'),
-    path('reserve/', include('reserve.urls')),
+    path('', include('reserve.urls')),
 
 
 

@@ -1,4 +1,4 @@
-# Create your models here.
+
 from django.db import models
 
 
@@ -49,6 +49,4 @@ class Book(models.Model):
 
     def __str__(self):
         return self.email
-from django.db import models
 
-# Create your models here.
