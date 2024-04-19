@@ -6,6 +6,7 @@ urlpatterns = [
     path('bookings', views.bookings, name="bookings"),
     path('cancellings', views.cancellings, name="cancellings"),
     path('seebookings', views.seebookings, name="seebookings"),
+    path('booklist', views.booklist, name="booklist"),
 
 
 ]
