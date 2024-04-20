@@ -45,5 +45,7 @@ def map(request):
 
 def reserve(request):
     return render(request, 'reserve.html')
+
+
 def review(request):
     return render(request, 'review.html')

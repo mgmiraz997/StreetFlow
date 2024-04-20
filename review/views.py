@@ -1,8 +1,10 @@
 from django.shortcuts import render
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
+from reserve.models import Book
 from .forms import ReviewForm
-# Import your ReviewForm
+from .models import Book
+
 
 # Create your views here.
 @login_required
@@ -24,4 +26,3 @@ def submit_review(request, booking_id):
     context['form'] = form
     context['booking'] = booking
     return render(request, 'review.html', context)
-

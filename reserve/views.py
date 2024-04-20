@@ -11,6 +11,7 @@ from .forms import UserLoginForm, UserRegisterForm
 from django.contrib.auth.decorators import login_required
 from decimal import Decimal
 
+
 def findbus(request):
     context = {}
     if request.method == 'POST':
@@ -25,6 +26,7 @@ def findbus(request):
             return render(request, 'findbus.html', context)
     else:
         return render(request, 'findbus.html')
+
 
 def bookings(request):
     context = {}
@@ -62,7 +64,6 @@ def bookings(request):
         return render(request, 'findbus.html')
 
 
-
 def cancellings(request):
     context = {}
     if request.method == 'POST':
@@ -85,8 +86,7 @@ def cancellings(request):
         return render(request, 'findbus.html')
 
 
-
-def seebookings(request,new={}):
+def seebookings(request, new={}):
     context = {}
     id_r = request.user.id
     book_list = Book.objects.filter(userid=id_r)
@@ -96,7 +96,6 @@ def seebookings(request,new={}):
         context["error"] = "Sorry no buses booked"
         return render(request, 'findbus.html', context)
 
+
 def booklist(request):
     return render(request, 'booklist.html')
-
-
