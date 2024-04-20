@@ -2,7 +2,7 @@ function createMap(center, zoom) {
     let map = L.map('map').setView(center, zoom);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
-        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
     return map
 }
@@ -12,7 +12,7 @@ function updateMarkers(markerFeatureGroup) {
     fetch('/vehicle-positions/').then(response => response.json()).then(data => {
         let prevLatLons = []
         markerFeatureGroup.eachLayer(layer => layer.hasOwnProperty('_latlng') && prevLatLons.push(layer._latlng))
-
+        
         markerFeatureGroup.clearLayers();
 
         data.vehicles.forEach((vehicle, idx) => {
