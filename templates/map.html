@@ -16,7 +16,7 @@
     document.addEventListener('DOMContentLoaded', () => {
         let map = createMap([23.5, 90], 5);
         let vehicles = JSON.parse(document.getElementById('vehicle-json').textContent)
-        
+
         let markerFeatureGroup = L.featureGroup().addTo(map);
 
         for (let vehicle of vehicles) {
