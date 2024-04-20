@@ -34,6 +34,8 @@ urlpatterns = [
     path('', include('reserve.urls')),
     path('', include('ticket.urls')),
     path('ticket/',include('ticket.urls')),
+    path('/review', views.reserve, name='review'),
+   # path('', include('review.urls')),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

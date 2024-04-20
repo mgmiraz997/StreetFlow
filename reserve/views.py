@@ -11,10 +11,6 @@ from .forms import UserLoginForm, UserRegisterForm
 from django.contrib.auth.decorators import login_required
 from decimal import Decimal
 
-
-
-
-
 def findbus(request):
     context = {}
     if request.method == 'POST':
@@ -29,8 +25,6 @@ def findbus(request):
             return render(request, 'findbus.html', context)
     else:
         return render(request, 'findbus.html')
-
-
 
 def bookings(request):
     context = {}
