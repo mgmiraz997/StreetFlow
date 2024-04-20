@@ -34,13 +34,14 @@ def style(request):
 def contactus(request):
     return render(request, 'contactus.html')
 
+
 def ticket(request):
     return render(request, 'ticket.html')
+
 
 def map(request):
     return render(request, 'map.html')
 
+
 def reserve(request):
     return render(request, 'reserve.html')
-
-
