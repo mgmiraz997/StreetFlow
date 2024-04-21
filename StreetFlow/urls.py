@@ -27,6 +27,7 @@ urlpatterns = [
     path('auth/', views.index, name='index'),
     path('streetflow1', include('streetflow1.urls')),
     path('members/', include('members.urls')),
+    path('map2/', include('map.urls')),
     path('/contactus', views.contactus, name='contactus'),
     path('/ticket', views.ticket, name='ticket'),
     path('/map', views.map, name='map'),

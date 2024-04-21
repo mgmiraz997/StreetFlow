@@ -9,7 +9,9 @@ function createMap(center, zoom) {
 
 function updateMarkers(markerFeatureGroup) {
     // Send a request to the server to get the new latitude and longitude data
-    fetch('/vehicle-positions/').then(response => response.json()).then(data => {
+    console.log('reached');
+    fetch("http://127.0.0.1:8000/map2/vehicle-positions/").then(response => response.json()).then(data => {
+
         let prevLatLons = []
         markerFeatureGroup.eachLayer(layer => layer.hasOwnProperty('_latlng') && prevLatLons.push(layer._latlng))
         

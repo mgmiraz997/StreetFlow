@@ -9,6 +9,7 @@ def map_view(request):
 
 
 def vehicle_positions(request):
+    print(list(Vehicle.objects.values('latitude', 'longitude')))
     return JsonResponse(
         {'vehicles': list(Vehicle.objects.values('latitude', 'longitude'))}
     )
