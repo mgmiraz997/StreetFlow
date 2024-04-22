@@ -29,7 +29,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'review',
     'reserve',
     'StreetFlow',
     'streetflow1',

@@ -35,8 +35,7 @@ urlpatterns = [
     path('', include('reserve.urls')),
     path('', include('ticket.urls')),
     path('ticket/',include('ticket.urls')),
-    path('review', views.review, name='review'),
-    path('review/', include('review.urls')),
+
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
