@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+p{% extends 'base.html' %}
 
 {% block content %}
 
@@ -14,7 +14,7 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        let map = createMap([23.7773, 90.3770], 13);
+        let map = createMap([23.7773, 90.3770], 10);
         let vehicles = JSON.parse(document.getElementById('vehicle-json').textContent)
 
         let markerFeatureGroup = L.featureGroup().addTo(map);

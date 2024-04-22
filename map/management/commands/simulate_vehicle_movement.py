@@ -9,7 +9,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         # Define the range of latitude and longitude variation
-        let_lon_var = 0.1  # 0.1 degree is approximately 11km
+        let_lon_var = 0.01  # 0.01 degree is approximately 1.1km
 
         while True:
             print("Vehicle positions updating...")

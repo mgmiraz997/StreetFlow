@@ -8,21 +8,26 @@ function createMap(center, zoom) {
 }
 
 function updateMarkers(markerFeatureGroup) {
-    // Send a request to the server to get the new latitude and longitude data
-    console.log('reached');
-    fetch("http://127.0.0.1:8000/map2/vehicle-positions/").then(response => response.json()).then(data => {
+    fetch("http://127.0.0.1:8000/map2/vehicle-positions/")
+      .then(response => response.json())
+      .then(data => {
+        let prevLatLons = [];
 
-        let prevLatLons = []
-        markerFeatureGroup.eachLayer(layer => layer.hasOwnProperty('_latlng') && prevLatLons.push(layer._latlng))
-        
+        markerFeatureGroup.eachLayer(layer =>
+          layer.hasOwnProperty('_latlng') && prevLatLons.push(layer._latlng)
+        );
+
         markerFeatureGroup.clearLayers();
 
         data.vehicles.forEach((vehicle, idx) => {
-            let prevLatLon = [prevLatLons[idx].lat, prevLatLons[idx].lng]
-            let newLatLon = [vehicle.latitude, vehicle.longitude];
-            L.marker(newLatLon).addTo(markerFeatureGroup);
-            L.polyline([prevLatLon, newLatLon]).addTo(markerFeatureGroup)
-        })
-    })
+          let prevLatLon = idx < prevLatLons.length ? [prevLatLons[idx].lat, prevLatLons[idx].lng] : null;
+          let newLatLon = [vehicle.latitude, vehicle.longitude];
 
-}
+          L.marker(newLatLon).addTo(markerFeatureGroup);
+
+          if (prevLatLon) {
+            L.polyline([prevLatLon, newLatLon]).addTo(markerFeatureGroup);
+          }
+        });
+      });
+  }
