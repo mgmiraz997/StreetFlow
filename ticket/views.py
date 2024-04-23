@@ -48,10 +48,10 @@ def register(request):
         # user = get_object_or_404(User, username = username, password = password)
         print(user)
         send_mail(
-            'Registration for BookBus',
-            'Dear '+username + '\n\nWelcome to BookBus\n\nHere you can search and book buses based on various filters',
+            'Registration for StreetFlow',
+            'Dear '+username + '\n\nWelcome to StreetFlow\n\nHere you can search and book buses based on various filters',
             settings.EMAIL_HOST_USER,
-            ['mohit.badve@spit.ac.in', username],
+            ['mahmudul.gony@spit.ac.in', username],
             fail_silently=False,
         )
         return render(request,'login_ui.html',{'username':'registered'})
@@ -178,9 +178,9 @@ def forgotPassword(request):
         if u.username == email_id:
             send_mail(
                 'Password Retrieval',
-                'Dear ' + email_id + '\n\nWelcome to BookBus\n\n' + 'Your password : ' + u.password,
+                'Dear ' + email_id + '\n\nWelcome to StreetFlow\n\n' + 'Your password : ' + u.password,
                 settings.EMAIL_HOST_USER,
-                ['mohit.badve@spit.ac.in', email_id],
+                ['mahmudul.gony@spit.ac.in', email_id],
                 fail_silently=False,
             )
             return render(request,'forgot_password.html',{'submit':'True'})
@@ -307,9 +307,9 @@ def changePassword(request):
             changedUser.password = new_password
             send_mail(
                 'Changed Password',
-                'Dear ' + email_id + '\n\nWelcome to BookBus\n\n' + 'Your new password : ' + new_password,
+                'Dear ' + email_id + '\n\nWelcome to StreetFlow\n\n' + 'Your new password : ' + new_password,
                 settings.EMAIL_HOST_USER,
-                ['mohit.badve@spit.ac.in', email_id],
+                ['mahmudul.gony@spit.ac.in', email_id],
                 fail_silently=False,
             )
             changedUser.save()
