@@ -11,6 +11,9 @@ class User(models.Model):
     mob_no = models.CharField(max_length=10)
     type = models.CharField(max_length=1, default='C')
 
+    def __str__(self):
+        return self.username
+
     @classmethod
     def create(cls, username,email_id,password,dob,address,pincode,mob_no,type):
         user = cls(username = username,email_id=email_id,password = password,dob =dob, address=address,pincode = pincode,mob_no=mob_no,type=type)
@@ -50,7 +53,8 @@ class Bus(models.Model):
     #NEWWW AJSAKAJGSAAKASJHSA
     no_of_rows = models.IntegerField(default=1)
     no_of_columns = models.IntegerField(default=1)
-
+    def __str__(self):
+        return self.name
     @classmethod
     def create(cls, bus_id,name,source,destination,no_of_seats,time,description,availability,available_seats,no_of_rows,no_of_columns):
         bus = cls(bus_id = bus_id,name=name,source = source,destination =destination, no_of_seats=no_of_seats,time = time,description=description,availability=availability,
