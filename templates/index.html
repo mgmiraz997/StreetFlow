@@ -787,7 +787,17 @@
 
         }())
     </script>
-
+<script>
+        // Initialize Splide testimonial slider
+        document.addEventListener('DOMContentLoaded', function () {
+            new Splide('.splide', {
+                // Configure Splide options if needed
+                type: 'fade',
+                heightRatio: 0.5,
+                // Add more options as needed
+            }).mount();
+        });
+    </script>
 
 </body>
 
