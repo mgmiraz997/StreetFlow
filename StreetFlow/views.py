@@ -3,6 +3,7 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import AuthenticationForm
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
+from django.core.mail import send_mail
 
 
 def home(request):
@@ -47,3 +48,21 @@ def reserve(request):
     return render(request, 'reserve.html')
 
 
+def sendmail(request):
+    if request.method=='POST':
+        email=request.POST['email']
+        subject=request.POST['subject']
+        message=request.POST['message']
+        sendmail(
+            email,
+            subject,
+            message,
+            "mahmudul.gony@gmail.com",
+            ['maharazaman16@gmail.com'],
+            fail_silently=False,
+        )
+        message.info (request,"Mail send successfully")
+        return render(request,'contactus.html')
+    else:
+        messages.info(request,"Mail not send")
+        return render(request,'contactus.html')

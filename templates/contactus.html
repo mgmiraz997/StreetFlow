@@ -41,6 +41,8 @@
                     <div class="col-lg-2/5 col-md-6/7 ">
                         <div class="column-inner dorik-column-n486kf8h  2/5">
                             <form id="d54wz3vd" class="dorik-contactForm-d54wz3vd "><input type="hidden" name="_t" value="" /><input type="hidden" name="_sub" />
+                                <form action="sendmail" method="post">
+                                    {% csrf_token %}
                                 <div class="fields-wrapper">
                                     <div class="form-group"><label>Email</label><input type="email" name="email" required="" class="form-control" placeholder="Enter your email" /></div>
                                     <div class="form-group"><label>Subject</label><input type="text" name="subject" class="form-control" placeholder="Email Subject" /></div>
@@ -48,7 +50,11 @@
                                     <div style="left:-100vw;position:absolute"><label for="confirm_d54wz3vd"><input type="text" autoComplete="off" id="confirm_d54wz3vd" name="confirm_d54wz3vd" placeholder="Enter your confirm_d54wz3vd"/></label></div>
                                     <div class="form-group form-button"><button type="submit">Send message<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="spinner" class="svg-inline--fa fa-spinner fa-spin fa-fw spinner" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="display:none;margin-left:5px"><path fill="currentColor" d="M304 48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zm0 416a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM48 304a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm464-48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM142.9 437A48 48 0 1 0 75 369.1 48 48 0 1 0 142.9 437zm0-294.2A48 48 0 1 0 75 75a48 48 0 1 0 67.9 67.9zM369.1 437A48 48 0 1 0 437 369.1 48 48 0 1 0 369.1 437z"></path></svg></button></div>
                                 </div>
+                                </form>
                             </form>
+                            {% for msg in messages %}
+                            {{ mesg }}
+                            {% endfor %}
                         </div>
                     </div>
                     <div class="col-lg-2/5 col-md-6/7 ">
@@ -200,7 +206,7 @@
                     const honeyPotField = document.querySelector(
                         `input[id="${honeyPotIdentifier}"]`
                     );
-                    return !honeyPotField ? .value;
+                    return !honeyPotField ?.value;
                 };
 
                 const isLegitimateUser = verifyLegitimateUser();

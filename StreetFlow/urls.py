@@ -35,6 +35,7 @@ urlpatterns = [
     path('', include('reserve.urls')),
     path('', include('ticket.urls')),
     path('ticket/',include('ticket.urls')),
+    path('sendmail', views.sendmail, name='sendmail'),
 
 ]
 if settings.DEBUG:
