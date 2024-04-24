@@ -49,20 +49,20 @@ def reserve(request):
 
 
 def sendmail(request):
-    if request.method=='POST':
-        email=request.POST['email']
-        subject=request.POST['subject']
-        message=request.POST['message']
+    if request.method == 'POST':
+        email = request.POST['email']
+        subject = request.POST['subject']
+        message = request.POST['message']
         sendmail(
-            email,
-            subject,
-            message,
+            'email',
+            'subject',
+            'message',
             "mahmudul.gony@gmail.com",
-            ['maharazaman16@gmail.com'],
+            ['email'],
             fail_silently=False,
         )
-        message.info (request,"Mail send successfully")
-        return render(request,'contactus.html')
+        message.info(request, "Mail send successfully")
+        return render(request, 'contactus.html')
     else:
-        messages.info(request,"Mail not send")
-        return render(request,'contactus.html')
+        messages.info(request, "Mail not send")
+        return render(request, 'contactus.html')
