@@ -50,6 +50,7 @@ class Bus(models.Model):
     availability = models.CharField(default='A',max_length=1)
     available_seats = models.IntegerField(default=no_of_seats)
 
+
     #NEWWW AJSAKAJGSAAKASJHSA
     no_of_rows = models.IntegerField(default=1)
     no_of_columns = models.IntegerField(default=1)
