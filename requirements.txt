@@ -31,3 +31,7 @@ class TestMap():
     self.driver.find_element(By.CSS_SELECTOR, ".dorik-heading-ons26f4z > span").click()
     self.driver.find_element(By.CSS_SELECTOR, ".dorik-heading-eba2x1to > span").click()
 
+
+Django~=5.0.3
+pytest~=8.3.3
+selenium~=4.27.0
