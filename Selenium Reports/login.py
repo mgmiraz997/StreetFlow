@@ -18,8 +18,8 @@ def driver():
 @pytest.mark.parametrize("username, password", [
     ("customer1@gmail.com", "123456"),
     ("leodas@gmail.com", "123456"),
-    ("test", "test"),
-    ("admin", "admin"),
+    ("test@yahoo.com", "test"),
+    ("admin@gmail.com", "admin"),
 
 ])
 def test_login(driver, username, password):
