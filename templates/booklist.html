@@ -36,7 +36,7 @@
     {% endfor %}
 </table>
 <form action="{% url 'cancellings' %}" method="post">
-    <h3>Choose bus to book</h3>
+    <h3>Choose bus to cancel</h3>
     {% csrf_token %}
     <div class="col-auto">
         <label for="example-email-input" class="col-2 col-form-label">Bus ID</label>
