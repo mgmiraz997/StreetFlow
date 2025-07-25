@@ -33,6 +33,9 @@ Social Impact:
 4. Offers accessible, all-in-one transport solutions
 
 5. Promotes smart city initiatives through technology
+
+Here is the base ER diagram of our entire project where it contains all the features of this project
+
 ![ER Diagram for SD](https://github.com/user-attachments/assets/881f4ccc-ac8b-4b2f-ac3f-879fe7b5ee44)
 
 ![01](https://github.com/user-attachments/assets/5c1a352a-a0da-43ed-8f2c-3b095e55952a)
