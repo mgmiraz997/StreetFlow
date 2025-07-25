@@ -34,7 +34,7 @@ Social Impact:
 
 5. Promotes smart city initiatives through technology
 
-Here is the base ER diagram of our entire project where it contains all the features of this project
+Here is the base ER diagram of our entire project where it contains all the features of this project:
 
 ![ER Diagram for SD](https://github.com/user-attachments/assets/881f4ccc-ac8b-4b2f-ac3f-879fe7b5ee44)
 
